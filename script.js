@@ -17,7 +17,7 @@ fetch('https://api.genius.com/search?q=Kendrick%20Lamar', {
     method: 'GET', headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + "uLgOnx2exL-LK_z_pEMFjUFcvBlu0ar2F1BKmY5oc7r8WWDawku4bQHRf02GuY3d"
+        'Authorization': 'Bearer ' + "7A9b7GcTBshdtsCU0K4_t5Ea4-o9VIONdcTpylb2s-tVZNy3G50NO1bWLV5fCkIp"
     }
 })
     .then((response) => {
