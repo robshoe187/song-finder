@@ -1,10 +1,26 @@
-
-
-
+body {
+    background-color: black;
+}
     
-    header h1 {
+header h1 {
     color: blue;
     text-align: center;
     background-color: darkgrey;
     font-style: italic;
+}
+/* header span{ */
+    /* color: black; */
+/* } */
+.name {
+    background-color: white;
+}
+.search {
+    height: 325px;
+}
+
+    
+
+footer {
+    color: violet;
+    text-align: center;
 }
