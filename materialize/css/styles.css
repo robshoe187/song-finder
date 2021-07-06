@@ -8,9 +8,10 @@ header h1 {
     background-color: darkgrey;
     font-style: italic;
 }
-/* header span{ */
-    /* color: black; */
-/* } */
+header span{
+    color:maroon;
+    font-weight:600;
+}
 .name {
     background-color: white;
 }
