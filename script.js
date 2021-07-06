@@ -43,14 +43,14 @@ fetch("https://api.genius.com/search?q="+searchTerm+"&access_token=7A9b7GcTBshdt
 //Display Search Results from Spotify    
 var displaySpotify = function(spotifyData) {
     for (let i = 0; i < spotifyData.tracks.limit; i++) {
-        songlistEl.innerHTML += `<a href="${spotifyData.tracks.items[i].external_urls.spotify}">${spotifyData.tracks.items[i].name + " by " + spotifyData.tracks.items[i].artists[0].name}</a><br>`
+        songlistEl.innerHTML += `<a href="${spotifyData.tracks.items[i].external_urls.spotify}" target="_blank">${spotifyData.tracks.items[i].name + " by " + spotifyData.tracks.items[i].artists[0].name}</a><br>`
     }
 }
 
 //Display search results from Genius
 var displayGenius = function(geniusData) {
     for (let i = 0; i < geniusData.response.hits.length; i++) {
-        lyricListEl.innerHTML += `<a href="${geniusData.response.hits[i].result.url}">${geniusData.response.hits[i].result.full_title}</a><br>`
+        lyricListEl.innerHTML += `<a href="${geniusData.response.hits[i].result.url}" target="_blank">${geniusData.response.hits[i].result.full_title}</a><br>`
     }
 
 }
