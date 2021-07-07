@@ -16,7 +16,12 @@ header span{
     background-color: white;
 }
 .search {
-    height: 325px;
+    color:black;
+    height: 100%px;
+}
+.lyrics{
+    color:black;
+    height: 100%;
 }
 
     
