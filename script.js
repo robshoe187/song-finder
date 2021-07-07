@@ -2,6 +2,7 @@ var nameEl = document.querySelector("#song-name")
 var searchBtnEl = document.querySelector("#searchBtn")
 var songlistEl = document.querySelector("#songlist")
 var lyricListEl = document.querySelector("#lyriclist")
+var modalContent = document.querySelector("#modal1")
 var searchHistory =  JSON.parse(localStorage.getItem("searches")) || {}
 
 var searchHandler = function() {
@@ -16,7 +17,8 @@ var searchHandler = function() {
         localStorage.setItem("searches",JSON.stringify(searchHistory))
         nameEl.value = ""
     } else {
-        alert("Please enter a song name")
+        //opened modal
+        $('.modal').modal('open');
     }
 }
 
@@ -69,4 +71,6 @@ $(document).ready(function(){
     $('#song-name').autocomplete({
       data:searchHistory,
     });
+
+    $('.modal').modal();
   });
