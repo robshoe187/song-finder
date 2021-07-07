@@ -2,6 +2,7 @@ var nameEl = document.querySelector("#song-name")
 var searchBtnEl = document.querySelector("#searchBtn")
 var songlistEl = document.querySelector("#songlist")
 var lyricListEl = document.querySelector("#lyriclist")
+var searchHistory =  JSON.parse(localStorage.getItem("searches")) || {}
 
 var searchHandler = function() {
     
@@ -9,6 +10,10 @@ var searchHandler = function() {
     if (search){
         getSpotify(search)
         getGenius(search)
+        
+        searchHistory[search] = null
+        console.log(searchHistory)
+        localStorage.setItem("searches",JSON.stringify(searchHistory))
         nameEl.value = ""
     } else {
         alert("Please enter a song name")
@@ -20,7 +25,7 @@ fetch('https://api.spotify.com/v1/search?query='+searchTerm+'&type=track', {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + "BQAtZBs33K3DiY-z_JFsKf12zKjOj2u5y9FCeVNTGwy8_-B_Ph7QeXF86FfgRWShqUHQezjXZNAp8TzdQHpTVdLohmcEQyTe-78Y79On1NE6GiEBDWOtskD933ZYiNIkyJL0K4bSnfjcZA42"
+                'Authorization': 'Bearer ' + "BQB1AMeQDnyOdCORCbB6q3ynFX0Fty1gzWPU5kUDkq_sXMUsEpY3CBDX61g8Qsotz8S8ZiZ9pVi1vVa6GgqSJqTo53CDuCu-oiiNLkCIrZnU2nvJAEJrj_whHNopQ2J3jSNXuE3YFpV0ppAO"
             }
         })
             .then((response) => {
@@ -56,3 +61,12 @@ var displayGenius = function(geniusData) {
 }
 
 searchBtnEl.addEventListener("click", searchHandler)
+
+$(document).ready(function(){
+
+   
+
+    $('#song-name').autocomplete({
+      data:searchHistory,
+    });
+  });
