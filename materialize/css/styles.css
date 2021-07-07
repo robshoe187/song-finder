@@ -8,14 +8,20 @@ header h1 {
     background-color: darkgrey;
     font-style: italic;
 }
-/* header span{ */
-    /* color: black; */
-/* } */
+header span{
+    color:maroon;
+    font-weight:600;
+}
 .name {
     background-color: white;
 }
 .search {
-    height: 325px;
+    color:black;
+    height: 100%px;
+}
+.lyrics{
+    color:black;
+    height: 100%;
 }
 
     
