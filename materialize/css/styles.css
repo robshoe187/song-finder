@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+}
+    
+header h1 {
+    color: blue;
+    text-align: center;
+    background-color: darkgrey;
+    font-style: italic;
+}
+header span{
+    color:maroon;
+    font-weight:600;
+}
+.name {
+    background-color: white;
+}
+.search {
+    color:black;
+    height: 100%px;
+}
+.lyrics{
+    color:black;
+    height: 100%;
+}
+
+    
+
+footer {
+    color: violet;
+    text-align: center;
+}
