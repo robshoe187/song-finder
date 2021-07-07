@@ -21,11 +21,12 @@ var searchHandler = function() {
 }
 
 var getSpotify = function(searchTerm) {
-fetch('https://api.spotify.com/v1/search?query='+searchTerm+'&type=track', {
+fetch('https://api.spotify.com/v1/search?query='+searchTerm+'&type=track&expires_in=600000', {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + "BQB1AMeQDnyOdCORCbB6q3ynFX0Fty1gzWPU5kUDkq_sXMUsEpY3CBDX61g8Qsotz8S8ZiZ9pVi1vVa6GgqSJqTo53CDuCu-oiiNLkCIrZnU2nvJAEJrj_whHNopQ2J3jSNXuE3YFpV0ppAO"
+                'Authorization': 'Bearer ' + "BQBK6bd9hEOJbZpfFXEW70GSgFznF_YZuUuQoKMKBBljdmkybfEL-c6t367Fzpa9DMOO3Vti-5U6hDVy9gm_n8Bb7NMRFMn-mGqAsX8dmUt9Yy7G6IKy4ZmoS1DqJhp7c7ED2xvhAtCfNkFF",
+                // 'expires_in': 3600
             }
         })
             .then((response) => {
