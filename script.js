@@ -15,7 +15,6 @@ var searchHandler = function() {
         searchHistory[search] = null
         console.log(searchHistory)
         localStorage.setItem("searches",JSON.stringify(searchHistory))
-
     } else {
         //opened modal
         $('.modal').modal('open');
@@ -50,6 +49,7 @@ fetch("https://api.genius.com/search?q="+searchTerm+"&access_token=7A9b7GcTBshdt
 }
 //Display Search Results from Spotify    
 var displaySpotify = function(spotifyData) {
+    songlistEl.innerHTML = "";
     for (let i = 0; i < spotifyData.tracks.limit; i++) {
         songlistEl.innerHTML += `<a href="${spotifyData.tracks.items[i].external_urls.spotify}" target="_blank">${spotifyData.tracks.items[i].name + " by " + spotifyData.tracks.items[i].artists[0].name}</a><br>`
     }
@@ -57,6 +57,7 @@ var displaySpotify = function(spotifyData) {
 
 //Display search results from Genius
 var displayGenius = function(geniusData) {
+    lyricListEl.innerHTML = "";
     for (let i = 0; i < geniusData.response.hits.length; i++) {
         lyricListEl.innerHTML += `<a href="${geniusData.response.hits[i].result.url}" target="_blank">${geniusData.response.hits[i].result.full_title}</a><br>`
     }
