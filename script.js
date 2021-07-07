@@ -15,11 +15,12 @@ var searchHandler = function() {
         searchHistory[search] = null
         console.log(searchHistory)
         localStorage.setItem("searches",JSON.stringify(searchHistory))
-        nameEl.value = ""
+
     } else {
         //opened modal
         $('.modal').modal('open');
     }
+
 }
 
 var getSpotify = function(searchTerm) {
