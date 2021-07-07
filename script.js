@@ -27,7 +27,7 @@ fetch('https://api.spotify.com/v1/search?query='+searchTerm+'&type=track', {
             method: 'GET', headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + "BQB1AMeQDnyOdCORCbB6q3ynFX0Fty1gzWPU5kUDkq_sXMUsEpY3CBDX61g8Qsotz8S8ZiZ9pVi1vVa6GgqSJqTo53CDuCu-oiiNLkCIrZnU2nvJAEJrj_whHNopQ2J3jSNXuE3YFpV0ppAO"
+                'Authorization': 'Bearer ' + "BQAvVbbJrv6KLR27da7Dx7soq8XZ9r9QZw_UvlqDvKVn4J8K4035yo0yptbYwi53WC7gSpT3bYVIAyczS-R5Mc1gZBVaFCOhYPyCEotDay2UzwHl4-I4juRpVz5Nd0Lr5TdUG2Fo1zH2r6rq"
             }
         })
             .then((response) => {
