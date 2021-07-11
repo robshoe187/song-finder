@@ -9,7 +9,7 @@ header h1 {
     font-style: italic;
 }
 header span{
-    color:red;
+    color:rgba(128, 18, 230, 0.884);
     font-weight:600;
 }
 .name {
@@ -24,6 +24,7 @@ header span{
     color:black;
     height: 100%;
     text-align: center;
+    margin-left: blue;
 }
 a:link{
     text-decoration: none;
@@ -37,7 +38,13 @@ a:hover {
     color:red;
 }    
 
-footer {
-    color: violet;
+.footer {
+    margin-top: 19%;
+    color: blue;
     text-align: center;
+    flex-shrink: 0;
 }
+.content {
+    flex: 1 0 auto;
+}
+        
