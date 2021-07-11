@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+}
+    
+header h1 {
+    color: blue;
+    text-align: center;
+    background-color: darkgrey;
+    font-style: italic;
+}
+header span{
+    color:red;
+    font-weight:600;
+}
+.name {
+    background-color: white;
+}
+.search {
+    color:black;
+    height: 100%px;
+    text-align: center;
+}
+.lyrics{
+    color:black;
+    height: 100%;
+    text-align: center;
+}
+a:link{
+    text-decoration: none;
+    color:blue;
+    height: 100%;
+}
+a:visited{
+    color:black;
+}
+a:hover {
+    color:red;
+}    
+
+footer {
+    color: violet;
+    text-align: center;
+}
